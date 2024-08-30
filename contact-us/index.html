@@ -5,6 +5,31 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Web Design and Web Development Services in Chennai | Saop Technologies</title>
+
+	<script>
+        window.onload = function() {
+            function getQueryParam(param) {
+                const queryParams = new URLSearchParams(window.location.search);
+                return queryParams.get(param);
+            }
+
+            const val = getQueryParam('value');
+
+            if (val) {
+                const targetSection = document.querySelector('.contact_form');
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+
+                // Set the value to the text input inside the target section
+                const textInput = document.querySelector('.customer_name');
+                if (textInput) {
+                    textInput.value = val;
+                }
+            }
+        };
+    </script>
+
 	<link rel="alternate" type="application/rss+xml"
 		title="Web Design Company Web Development Company in Chennai &raquo;">
 	<link rel='stylesheet' id='wp-block-library-css'
@@ -10179,7 +10204,7 @@
 																						<div
 																							class="elementor-widget-container">
 																							<h1
-																								class="elementor-heading-title elementor-size-default">
+																								class="elementor-heading-title elementor-size-default contact_form">
 																								WE WILL ANSWER YOU</h1>
 																						</div>
 																					</div>
@@ -10378,7 +10403,7 @@
 																																	data-decimal="."
 																																	data-delay=""
 																																	data-id="1"
-																																	class="fc-form fc-form-1 align- fc-temp-class spin- save-form- dont-submit-hidden- remove-asterisk- icons-hide- disable-enter- label-floating field-border-visible frame-visible field-alignment-left options-fade"
+																																	class="fc-form fc-form-1 align- fc-temp-class spin- save-form- dont-submit-hidden- remove-asterisk- icons-hide- disable-enter- label-floating field-border-visible frame-visible field-alignment-left options-fade "
 																																	style="width: 1100px; color: #666666; font-size: 100%; background: white">
 																																	<div class="form-page form-page-0"
 																																		data-index="0">
@@ -10401,7 +10426,8 @@
 																																										name</span></span></span>
 																																							<div>
 																																								<span
-																																									class="error"></span><input
+																																									class="error"></span>
+																																	<input
 																																									type="text"
 																																									placeholder=""
 																																									make-read-only="false"
@@ -10413,7 +10439,7 @@
 																																									data-regexp=""
 																																									data-is-required="true"
 																																									data-allow-spaces=""
-																																									class="validation-lenient"
+																																									class="validation-lenient customer_name"
 																																									data-placement="right"
 																																									data-toggle="tooltip"
 																																									tooltip=""
